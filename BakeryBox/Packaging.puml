@@ -1,0 +1,15 @@
+@startuml
+title Packaging Design
+
+rectangle "Box Packaging Design" {
+  rectangle "BakeryBox Premium Artisan Bread" as box
+  note bottom of box
+  Spesifikasi:
+  • Material: Food-grade kraft
+  • Ventilasi khusus
+  • Label informasi produk
+  • QR code tracking
+  end note
+}
+
+@endum

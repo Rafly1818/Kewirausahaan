@@ -1,0 +1,19 @@
+@startuml BakeryBox
+rectangle "Dapur Produksi BakeryBox" {
+  rectangle "Layout Dapur Produksi" {
+    rectangle "1. Area Penyimpanan" {
+      rectangle "Bahan Baku" as bahan_baku
+      rectangle "Stock Roti" as stock_roti
+    }
+    
+    rectangle "2. Area Produksi" {
+      rectangle "Oven" as oven
+      rectangle "Meja Produksi" as meja_produksi
+    }
+    
+    rectangle "3. Area Pengemasan" {
+      rectangle "Area Packaging" as area_packaging
+    }
+  }
+}
+@enduml

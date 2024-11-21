@@ -1,0 +1,19 @@
+@startuml
+title Sistem Pengiriman BakeryBox
+
+rectangle "Zona Pengiriman BakeryBox" {
+  rectangle "Zona 1" as zona1
+  rectangle "Zona 2" as zona2
+  rectangle "Zona 3" as zona3
+  rectangle "Zona 4" as zona4
+}
+
+note right of zona1
+Pembagian Waktu:
+• Zona 1: 14.00-15.00
+• Zona 2: 15.00-16.00
+• Zona 3: 16.00-17.00
+• Zona 4: 17.00-18.00
+end note
+
+@enduml

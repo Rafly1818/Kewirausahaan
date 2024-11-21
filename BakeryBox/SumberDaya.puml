@@ -1,0 +1,37 @@
+@startuml
+title Sumber Daya BakeryBox
+
+' Bagian A: Peralatan Produksi
+package "A. Peralatan Produksi" {
+  rectangle "Oven Industrial\n- 2 unit\n- Kapasitas: 100kg/batch" as oven
+  rectangle "Mixer Adonan\n- 2 unit\n- Kapasitas: 50kg/batch" as mixer
+  rectangle "Proofing Chamber\n- 2 unit\n- Kapasitas: 200 loaf" as proofing
+  rectangle "Meja Stainless\n- 4 unit" as meja
+  rectangle "Rak Pendingin\n- 3 unit\n- Kapasitas: 100 loaf" as rak
+}
+
+' Bagian B: Kendaraan Operasional
+package "B. Kendaraan Operasional" {
+  rectangle "Box Motor\n- 4 unit\n- Kapasitas: 50 box" as box_motor
+  rectangle "Mobil Box\n- 2 unit\n- Kapasitas: 200 box" as mobil_box
+}
+
+' Bagian C: Sumber Daya Manusia
+package "C. Sumber Daya Manusia" {
+  rectangle "Head Baker\n- 1 orang\n- Gaji: Rp8.000.000/bulan" as head_baker
+  rectangle "Assistant Baker\n- 3 orang\n- Gaji: Rp4.500.000/orang" as assistant_baker
+  rectangle "Packaging Staff\n- 4 orang\n- Gaji: Rp4.000.000/orang" as packaging_staff
+  rectangle "Driver\n- 6 orang\n- Gaji: Rp4.000.000/orang" as driver
+}
+
+' Total Gaji
+note bottom of driver
+Perhitungan Gaji:
+• Head Baker: Rp8.000.000 x 1 = Rp8.000.000
+• Assistant Baker: Rp4.500.000 x 3 = Rp13.500.000
+• Packaging Staff: Rp4.000.000 x 4 = Rp16.000.000
+• Driver: Rp4.000.000 x 6 = Rp24.000.000
+Total Pengeluaran Gaji/Bulan: Rp61.500.000
+end note
+
+@enduml
