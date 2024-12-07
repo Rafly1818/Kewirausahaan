@@ -1,0 +1,28 @@
+@startuml
+title Proses Bisnis dan Pemasaran - BakeryBox
+
+actor "Pelanggan" as pelanggan
+actor "Tim Pemasaran" as pemasaran
+actor "Logistik" as logistik
+actor "Pemasok" as pemasok
+
+rectangle "Sistem BakeryBox" {
+  rectangle "Manajemen Langganan" as langganan
+  rectangle "Pemrosesan Pesanan" as pesanan
+  rectangle "Kampanye Pemasaran" as kampanye
+  rectangle "Manajemen Inventaris" as inventaris
+}
+
+pelanggan --> langganan : "Berlangganan"
+langganan --> pesanan : "Buat Pesanan"
+pesanan --> inventaris : "Cek Stok"
+inventaris --> pemasok : "Minta Bahan jika Stok Habis"
+pemasok --> inventaris : "Kirim Bahan"
+pesanan --> logistik : "Persiapkan Pengiriman"
+logistik --> pelanggan : "Kirim Roti Artisan"
+
+kampanye --> pemasaran : "Buat Promosi"
+pemasaran --> pelanggan : "Kirim Promosi (Email, Media Sosial)"
+pelanggan --> kampanye : "Respon Promosi"
+
+@enduml
